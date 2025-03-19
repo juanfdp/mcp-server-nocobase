@@ -9,10 +9,8 @@ import {
 import {APIClient} from '@nocobase/sdk';
 import {Converter} from 'openapi2mcptools';
 
-// Command line argument parsing
-const args = process.argv.slice(2);
-const url = args[0];
-const token = args[1];
+const url = process.env.MCP_NOCOBASE_URL;
+const token = process.env.MCP_NOCOBASE_TOKEN;
 
 // Server setup
 const server = new Server(
